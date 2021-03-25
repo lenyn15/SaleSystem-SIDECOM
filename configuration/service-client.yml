@@ -1,0 +1,27 @@
+spring:
+  # Database configuration
+  datasource:
+    driver-class-name: org.postgresql.Drive
+    url: jdbc:postgresql://localhost:5432/Sidecom
+    username: postgres
+    password: 1525
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+  # Server configuration
+  server:
+    port: 8015
+    error:
+      include-message: always
+      include-binding-errors: always
+  # Eureka client
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8099/eureka/
